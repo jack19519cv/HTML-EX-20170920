@@ -3,14 +3,11 @@
     padding:0;
 }
 #wrap{
-   max-widthwidth: 100%;
-
-    background-color: rgb(44, 148, 255);
     magin:0 auto auto auto;
     text-align: center;
     display: block;
-    text-align: center;
-
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
 
 }
 #footer{
