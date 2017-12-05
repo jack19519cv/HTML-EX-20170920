@@ -34,27 +34,13 @@ $o=0;
             padding: 25px;
         }
     </style>
-    <table border="1" width="50%" <?php style='background: rgb($r,100,100)'  ?>>
+    <table border="1" width="50%" style='background: rgb(200,100,100)'  >
         <?php
         for($i=1;$i<$n;$i++){
             echo "<tr>";
             for($j=1;$j<$s;$j++){
                 $o=$i*$j;
                 echo "<td><span style='text-align: center'  ><h1> $o</h1><span></td>";
-
-            }
-            echo "</tr>";
-        }
-        ?>
-    </table>
-    <?php
-   echo"
-    <table border='1' width='50%'>";
-        for($i=1;$i<$n;$i++){
-            echo "<tr>";
-            for($j=1;$j<$s;$j++){
-                $o=$i*$j;
-                echo "<td style='background: rgb($r,$g,$b)'><span style='text-align: center'  ><h1> $o</h1><span></td>";
 
             }
             echo "</tr>";
@@ -77,7 +63,7 @@ $o=0;
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="../index.html">首頁</a></li>
+                <li class="active"><a href="index.html">首頁</a></li>
                 <li><a href="Tech/Vitae.html">簡歷</a></li>
                 <li><a href="Tech/Academic.html">學術</a></li>
                 <li><a href="#">著作</a></li>
