@@ -1,3 +1,10 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: USER
+ * Date: 2017/12/6
+ * Time: 上午 10:58
+ */?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,10 +43,10 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li ><a href="../class/1/index.html">首頁</a></li>
-                <li ><a href="../Vitae.html">簡歷</a></li>
-                <li class="active"><a href="../Academic.html">學術</a></li>
-                <li><a href="#">著作</a></li>
+                <li ><a href="../index.php">首頁</a></li>
+                <li ><a href="Vitae.html">簡歷</a></li>
+                <li class="active"><a href="Academic.php">學術</a></li>
+                <li><a href="writing.html">著作</a></li>
                 <li><a href="#">學生</a></li>
                 <li><a href="#">常用連結</a></li>
             </ul>
@@ -69,30 +76,30 @@
 <div class="container-fluid1    bg-3 text-center">
 
     <div class="container">
-        <ul class="nav nav-pills">
-        <div class="row">
 
-            <div class="col-sm-4">
-                <li ><a href="../Academic.html">Text Mining</a></li>
+        <div class="col-sm-4">
+            <div class="row">
+                <ul class="nav nav-pills">
+
+                </ul>
             </div>
-                <div class="col-sm-4">
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="Academic.html">Text Mining</a></li>
+                    <li ><a href="Tech/acaco/Bibliometrics.html">Bibliometrics</a></li>
 
+                </ul>
+            </div>
 
-                        <li class="active"><a href="Shape_Query.html">Shape Query</a></li>
-
-
-                </div>
-                    <div class="col-sm-4">
-                        <li><a href=""></a></li>
-                        <li ><a href=""></a></li>
-                    </div>
 
 
         </div>
-        </ul>
     </div>
 </div>
 <!--<div class="text-left">-->
+<hr >
 <div class="container">
     <div class="row">
         <div class="col-sm-3">
@@ -156,3 +163,4 @@
 
 
 </body>
+</html>

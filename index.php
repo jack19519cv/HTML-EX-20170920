@@ -49,7 +49,7 @@ include("mysql_connect.inc.php");
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">首頁</a></li>
+                <li class="active"><a href="index.php">首頁</a></li>
                 <li><a href="Tech/Vitae.html">簡歷</a></li>
                 <li><a href="Tech/Academic.html">學術</a></li>
                 <li><a href="Tech/writing.html">著作</a></li>

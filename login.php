@@ -1,13 +1,19 @@
 <!-- 設定網頁編碼為UTF-8 -->
 <html lang="en" xmlns:margin-right="http://www.w3.org/1999/xhtml">
-
+<!--font-family: 'Dancing Script', cursive;-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <form name="form" method="post" action="connect.php">
 <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Font+Name">
+
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <h1 class="text-center">Welcome</h1>
+            <div style="font-family: 'Font Name', serif;">
+                <h1 class="text-center" >Welcome</h1>
+
+            </div>
         </div>
         <div class="modal-body">
             <div class="form-group">
