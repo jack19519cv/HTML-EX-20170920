@@ -12,11 +12,13 @@ $db_password = "#a7a4YXPM";
 //對資料庫連線
 
 $connect = @mysqli_connect($db_server, $db_user, $db_password,$db_name);
+
+mysqli_set_charset($connect,'utf8');
 if(!$connect)
     die("無法對資料庫連線");
 //資料庫連線採UTF8
 
-mysqli_query("SET NAMES utf8");
+mysqli_set_charset($connect,'utf8');
 
 //選擇資料庫
 //if(!@mysqli_select_db($db_name))

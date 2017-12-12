@@ -5,7 +5,9 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-    font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Spectral+SC');
+    font-family: 'Source Sans Pro', sans-serif;
+
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
@@ -105,6 +107,7 @@ code,
 kbd,
 pre,
 samp {
+
     font-family: monospace, monospace;
     font-size: 1em;
 }
@@ -261,10 +264,13 @@ th {
     }
 }
 @font-face {
-    font-family: 'Glyphicons Halflings';
 
-    src: url('../fonts/glyphicons-halflings-regular.eot');
-    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+
+    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Spectral+SC');
+
+    font-family: 'Source Sans Pro', sans-serif;
+    /*src: url('../fonts/glyphicons-halflings-regular.eot');*/
+    /*src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');*/
 }
 .glyphicon {
     position: relative;

@@ -1,3 +1,12 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: jackwang
+ * Date: 2017/12/6
+ * Time: 下午 08:52
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +16,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <?php
+    include ("../function_for_GoogleFont.php");
+    googlefontset(true)
+    ?>
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
@@ -20,6 +33,10 @@
             background-color: #f2f2f2;
             padding: 25px;
         }
+        #brand-image{
+
+            height: 25px;
+        }
     </style>
 </head>
 <body>
@@ -32,20 +49,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://asia.edu.tw/ ">學校首頁</a>
+            <a class="navbar-brand" href="http://csie.asia.edu.tw/">
+                <img id="brand-image" alt="Website Logo" src="pic/csie.png"">
+            </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-
-                <li ><a href="../../index.php">首頁</a></li>
-                <li ><a href="../Vitae.php">簡歷</a></li>
-                <li ><a href="../Academic.html">學術</a></li>
-                <li class="active"><a href="../writing.php">著作</a></li>
-                <li><a href="#">學生</a></li>
-                <li><a href="#">常用連結</a></li>
-            </ul>
+            <?php
+            include ("../function.php");
+            varbar($flag=1); ?>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php    if($_SESSION['id'] != null) {   ?>
+                    <li><a href="../logout.php"><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+                <?php   }else{?>
+                    <li><a href="../login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php   } ?>
             </ul>
         </div>
     </div>
@@ -81,9 +98,9 @@
         <div class="col-sm-6">
             <div class="row">
                 <ul class="nav nav-pills">
-                    <li  ><a href="../writing.php">Journal</a></li>
-                    <li ><a href="ic.html">International Conference</a></li>
-                    <li class="active" ><a href="dc.html">Domestic Conference</a></li>
+                    <li class="active" ><a href="writing.html">Journal</a></li>
+                    <li ><a href="wr/ic.html">International Conference</a></li>
+                    <li ><a href="wr/dc.html">Domestic Conference</a></li>
                 </ul>
             </div>
 
@@ -103,19 +120,19 @@
     <div class="col-sm-6">
         <div class="row">
 
-            <p>1.提升Hadoop MapReduce計算效能之研究-以抽取樣式歷史為例
-                陳彥棠、 <span style="font-weight: bolder">王經篤</span>
-                2015中華民國系統科學與工程研討會，2015年 7 月17-19日,大同大學</p>
+            <p>1.A Novel Approach to Extract Significant Time Interval Patterns of Vehicles from Freeway Gantry Timestamp Sequences
+                <span style="font-weight: bolder"> Jing-Doo Wang</span> and Ming-Chorng Hwang
+                Applied Sciences, 2017, 7(9), 878; doi:10.3390/app7090878. (SCIE, IF=1.679)
+                (Special Issue "Selected Papers from IEEE ICASI 2017")</p>
 
-            <p>2.樣式歷史資料之形狀查詢-藉由Haar小波
-                <span style="font-weight: bolder">王經篤</span>、蔣中凱、陳瑞奇
-                2015年資訊科技國際研討會暨民生電子論壇
-                The 9th International Conference on Advanced Information Technologies /
-                Consumer Electronics Forum (AIT/CEF 2015), 2015年 4 月24、25 日,朝陽科技大學, pages 1239-1254</p>
+            <p>2.Extracting Significant Pattern Histories from Timestamped Texts using MapReduce
+                <span style="font-weight: bolder">Jing-Doo Wang</span>
+                Journal of Supercomputing, 72(8), pp. 3236-3260, DOI 10.1007/s11227-016-1713-z,, April 2016
+                (SCI, SCIE 2014 JCR ,IF=0.858,RANK=56/102, COMPUTER SCIENCE, THEORY & METHODS)</p>
 
-            <p>3.社群網站使用者上線時段分析-以批踢踢為例
-                郭佳霖、 <span style="font-weight: bolder">王經篤</span>
-                2014 數位科技與創新管理研討會,2014年6月14日,華梵大學</p>
+            <p>3.Shape Query for Pattern History in PubMed Literatures via Haar Wavelet
+                <span style="font-weight: bolder">Jing-Doo Wang</span>Zhong-Kai Jiang,Jui-Chi Chen
+                International Journal of Advanced Information Technologies(IJAIT), Vol. 9 ;No. 6. pp. 67-76, December 2015.</p>
 
 
 
@@ -145,3 +162,6 @@
 
 
 </body>
+</html>
+
+

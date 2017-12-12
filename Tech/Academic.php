@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <?php
+    include ("../function_for_GoogleFont.php");
+    googlefontset(true)
+    ?>
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
@@ -27,6 +31,10 @@
             background-color: #f2f2f2;
             padding: 25px;
         }
+        #brand-image{
+
+            height: 25px;
+        }
     </style>
 </head>
 <body>
@@ -39,19 +47,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://asia.edu.tw/   ">學校首頁</a>
+            <a class="navbar-brand" href="http://csie.asia.edu.tw/">
+                <img id="brand-image" alt="Website Logo" src="pic/csie.png"">
+            </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li ><a href="../index.php">首頁</a></li>
-                <li ><a href="Vitae.html">簡歷</a></li>
-                <li class="active"><a href="Academic.php">學術</a></li>
-                <li><a href="writing.html">著作</a></li>
-                <li><a href="#">學生</a></li>
-                <li><a href="#">常用連結</a></li>
-            </ul>
+            <?php
+            include ("../function.php");
+            varbar($flag=1); ?>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php    if($_SESSION['id'] != null) {   ?>
+                    <li><a href="../logout.php"><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+                <?php   }else{?>
+                    <li><a href="../login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php   } ?>
             </ul>
         </div>
     </div>
@@ -88,7 +97,7 @@
             <div class="row">
                 <ul class="nav nav-pills">
                     <li class="active"><a href="Academic.html">Text Mining</a></li>
-                    <li ><a href="Tech/acaco/Bibliometrics.html">Bibliometrics</a></li>
+                    <li ><a href="acaco/Bibliometrics.html">Bibliometrics</a></li>
 
                 </ul>
             </div>
