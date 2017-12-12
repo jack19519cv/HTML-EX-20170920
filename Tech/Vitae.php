@@ -2,10 +2,14 @@
 /**
  * Created by PhpStorm.
  * User: jackwang
- * Date: 2017/12/6
- * Time: 下午 08:50
+ * Date: 2017/12/5
+ * Time: 下午 02:05
  */
 
+?>
+<?php session_start(); ?>
+<?php
+include("mysql_connect.inc.php");
 
 ?>
 <!DOCTYPE html>
@@ -55,9 +59,11 @@
             </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
+
+
             <?php
             include ("../function.php");
-            varbar($flag=1); ?>
+            varbar($flag=2); ?>
             <ul class="nav navbar-nav navbar-right">
                 <?php    if($_SESSION['id'] != null) {   ?>
                     <li><a href="../logout.php"><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>

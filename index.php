@@ -10,7 +10,7 @@
 <?php session_start(); ?>
 <?php
 include("mysql_connect.inc.php");
-session_set_cookie_params(5);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
