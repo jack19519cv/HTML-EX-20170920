@@ -3,8 +3,7 @@
 <?php
 include("mysql_connect.inc.php");
 mysqli_set_charset($link,'utf8');
-if($_SESSION['id'] != null)
-{
+if($_SESSION['id'] != null) {
     //將$_SESSION['username']丟給$id
     //這樣在下SQL語法時才可以給搜尋的值
     $id = $_SESSION['id'];
@@ -12,7 +11,6 @@ if($_SESSION['id'] != null)
     $sql = "SELECT * FROM `profile` where id='$id'";
     $result = mysqli_query($connect,$sql);
     $row = mysqli_fetch_row($result);
-
     echo "<form name=\"form\" method=\"post\" action=\"update_finish.php\">";
     echo "帳號：<input type=\"text\" name=\"id\" value=\"$row[0]\" />(此項目無法修改) <br>";
     echo "email：<input type=\"text\" name=\"email\" value=\"$row[1]\" /> <br>";
@@ -25,7 +23,6 @@ if($_SESSION['id'] != null)
     echo "fax：<input type=\"text\" name=\"fax\" value=\"$row[8]\" /> <br>";
     echo "phone：<input type=\"text\" name=\"phone\" value=\"$row[9]\" /> <br>";
     echo "research：<input type=\"text\" name=\"research\" value=\"$row[10]\" /> <br>";
-
 //    echo "備註：<textarea name=\"other\" cols=\"45\" rows=\"5\">$row[5]</textarea> <br>";
     echo "<input type=\"submit\" name=\"button\" value=\"確定\" />";
     echo "</form>";

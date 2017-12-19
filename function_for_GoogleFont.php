@@ -14,13 +14,13 @@ function googlefontset($set){
             font-family: ‘cwTeXKai’, serif;
             line-height: 2;
             font-size: 15px;
-            font-weight: 800;
+            font-weight: 700;
 
         }
         h1{
             font-family: ‘cwTeXKai’, serif;
 
-            font-weight: 800;}
+            font-weight: 900;}
 
     </style>
 

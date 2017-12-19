@@ -63,7 +63,7 @@ include("mysql_connect.inc.php");
 
             <?php
             include ("../function.php");
-            varbar($flag=4); ?>
+            varbar($flag=6); ?>
             <ul class="nav navbar-nav navbar-right">
                 <?php    if($_SESSION['id'] != null) {   ?>
                     <li><a href="../logout.php"><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
@@ -104,11 +104,9 @@ include("mysql_connect.inc.php");
         </div>
         <div class="col-sm-6">
             <div class="row">
-                <ul class="nav nav-pills">
-                    <li class="active" ><a href="writing.php">Journal</a></li>
-                    <li ><a href="wr/ic.html">International Conference</a></li>
-                    <li ><a href="wr/dc.html">Domestic Conference</a></li>
-                </ul>
+<!--                <ul class="nav nav-pills">-->
+<!--                    <li class="active" ><a href="writing.php">Journal</a></li>-->
+<!--                </ul>-->
             </div>
 
 
@@ -127,21 +125,24 @@ include("mysql_connect.inc.php");
     <div class="col-sm-6">
         <div class="row">
 
-            <p>1.A Novel Approach to Extract Significant Time Interval Patterns of Vehicles from Freeway Gantry Timestamp Sequences
-                <span style="font-weight: bolder"> Jing-Doo Wang</span> and Ming-Chorng Hwang
-                Applied Sciences, 2017, 7(9), 878; doi:10.3390/app7090878. (SCIE, IF=1.679)
-                (Special Issue "Selected Papers from IEEE ICASI 2017")</p>
+            <p ><a href="http://www.facebook.com/">Facebook<a/></p>
+            <p><a href="https://code.google.com/p/windoop/" >Hadoop<a/></p>
+            <p><a href="https://www.google.com.tw/">Google<a/></p>
+            <p><a href="http://mail.google.com/">GMail<a/></p>
 
-            <p>2.Extracting Significant Pattern Histories from Timestamped Texts using MapReduce
-                <span style="font-weight: bolder">Jing-Doo Wang</span>
-                Journal of Supercomputing, 72(8), pp. 3236-3260, DOI 10.1007/s11227-016-1713-z,, April 2016
-                (SCI, SCIE 2014 JCR ,IF=0.858,RANK=56/102, COMPUTER SCIENCE, THEORY & METHODS)</p>
-
-            <p>3.Shape Query for Pattern History in PubMed Literatures via Haar Wavelet
-                <span style="font-weight: bolder">Jing-Doo Wang</span>Zhong-Kai Jiang,Jui-Chi Chen
-                International Journal of Advanced Information Technologies(IJAIT), Vol. 9 ;No. 6. pp. 67-76, December 2015.</p>
-
-
+        <p>English Learning<p>
+        <p><a href="https://www.liveabc.com/site/Online_Store/member/ok3.asp">LiveABC<a/></p>
+        <p><a href="http://mws.ust.hk/mw/account/login.php">My Words<a/></p>
+        <p><a href="http://wordneighbors.ust.hk/">Word Neighbors<a/></p>
+        <p><a href="http://egg.ust.hk/cl3/index.html">EGG ( English Grammar Guide)<a/></p>
+        <p><a href="http://www.ted.com/">TED (Technology, Entertainment, Design)<a/></p>
+        <p><a href="http://quod.lib.umich.edu/m/micase/">MICASE<a/>(Michigan Corpus of Academic Spoken English)</p>
+        <p><a href="http://www.pbs.org/">PBS<a/>(Public Broadcasting Service)</p>
+        <p><a href="http://hk.dictionary.yahoo.com/">Yahoo!字典<a/></p>
+        <p><a href="http://www.netspeak.org/">netspeak<a/></p>
+        <p><a href="http://www.onlinedict.com/">顏氏美語<a/>
+            ,<a href="http://dictionary.sina.com.tw/">新浪字典<a/>
+            ,<a href="http://cdict.net/">英漢字典(English-Chinese Dictionary<a/></p>
 
 
         </div>

@@ -24,7 +24,7 @@ include("mysql_connect.inc.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <?php
     include ("function_for_GoogleFont.php");
-    googlefontset(true)
+    googlefontset(true);
     ?>
     <style>
         /* Add a gray background color and some padding to the footer */
@@ -63,7 +63,7 @@ include("mysql_connect.inc.php");
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="http://csie.asia.edu.tw/">
-                <img id="brand-image" alt="Website Logo" src="Tech/pic/csie.png"">
+                <img id="brand-image" alt="Website Logo" src="Tech/pic/csie.png">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -96,21 +96,21 @@ include("mysql_connect.inc.php");
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="Tech/pic/top.jpg" style="height: 420px" alt="Image">
+                        <img src="Tech/pic/top.jpg" style="height: 500px" alt="Image">
                         <div class="carousel-caption">
                             <h3>Asia</h3>
                             <p>university</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="Tech/pic/csie.png" style="height: 420px" alt="Image">
+                        <img src="Tech/pic/csie.png" style="height: 500px" alt="Image">
                         <div class="carousel-caption">
                             <span style="color:#ffcb20;"> <h3 >Asia</h3></span>
                             <span style="color:#000000;">  <p>csie</p></span>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="Tech/pic/forst.jpeg"  style="height: 420px" alt="Image">
+                        <img src="Tech/pic/forst.jpeg"  style="height: 500px" alt="Image">
                         <div class="carousel-caption">
                             <h3>wait</h3>
                             <p>push</p>
@@ -129,6 +129,18 @@ include("mysql_connect.inc.php");
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+            <button onclick="myFunction()">需要輸入名子嗎?</button>
+            <p id="demo"></p>
+            <script>
+                function myFunction() {
+                var a = prompt("Please enter your name", "未輸入");
+
+                if (a != null) {
+                    document.getElementById("demo").innerHTML = "您輸入的名子在這裡:"+a;
+
+                }
+                }
+            </script>
 
         </div>
         <div class="col-sm-4">
@@ -138,35 +150,24 @@ include("mysql_connect.inc.php");
 
             </div>
             <div class="well">
-                <h1 >王經篤</h1>
+                <?php      include("member.php");
+
+                while($row = mysqli_fetch_row($result))
+                {mysqli_set_charset($link,'utf8');?>
+                <h1 > <?php   echo " $row[2]<br> " ?></h1>
                 <p> 亞洲大學 資訊工程系 副教授</p>
             </div>
             <div class="well">
                 <?php
 
-                include("mysql_connect.inc.php");
 
-                $connect = @mysqli_connect($db_server, $db_user, $db_password,$db_name);
-                mysqli_set_charset($connect,'utf8');
-                if($_SESSION['id'] != null)
-                {
-//                echo '<a href="register.php">新增</a>    ';
-                    echo '<a href="update.php">修改</a>    <br>';
-//                echo '<a href="delete.php">刪除</a>  <br>';
-                }
-                //將資料庫裡的所有會員資料顯示在畫面上
-                $sql = "SELECT * FROM `profile`  ";
-
-                $result = mysqli_query($connect,$sql);
-
-                while($row = mysqli_fetch_row($result))
-                {mysqli_set_charset($link,'utf8');
 //                    id：$row[0]<br>
                     echo " email：$row[1]<br> " .
-                        "nameC：$row[2]<br> nameE：$row[3]<br> degree：$row[4]<br> exp：$row[5] <br> position：$row[6]
+                        " Eng_name：$row[3]<br> degree：$row[4]<br> exp：$row[5] <br> position：$row[6]
              <br> officeroom：$row[7]<br> fax：$row[8] <br> phone：$row[9] <br> research：$row[10]<br>";
                 }
-                //            }
+
+
                 ?>
 
             </div>
@@ -188,20 +189,28 @@ include("mysql_connect.inc.php");
 <!--            <p>Project 2</p>-->
         </div>
         <div class="col-sm-3">
+            <div class="col-lg-6 col-lg-offset-3">
             <div class="well">
-<!--                <p>Some text..</p>-->
+
+                <script language="Javascript">
+                    document.write('<a href="http://www.free-counter.jp/"></a>');</script><noscript>
+                    <a href="">カウンター</a><a href="http://hqm.f-counter.com/">カウンター</a></noscript>
+                <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href=""><img src="https://www.f-counter.net/ani1/29/1513700600/" alt="カウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
+                            <td><a href=""><img src="https://www.f-counter.net/ani2/29/1513700600/" alt="カウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
+
             </div>
-            <div class="well">
-<!--                <p>Some text..</p>-->
             </div>
+<!--            <div class="well">-->
+<!--              <p>Some text..</p>-->
+<!--            </div>-->
         </div>
         <div class="col-sm-3">
             <div class="well">
 <!--                <p>Some text..</p>-->
             </div>
-            <div class="well">
-<!--                <p>Some text..</p>-->
-            </div>
+<!--            <div class="well">-->
+<!--               <p>Some text..</p>-->
+<!--            </div>-->
         </div>
     </div>
     <hr>
