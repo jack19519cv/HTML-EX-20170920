@@ -22,6 +22,7 @@ include("mysql_connect.inc.php");
     <link rel="stylesheet" type="text/css" href="CSS/cotm.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <?php
     include ("function_for_GoogleFont.php");
     googlefontset(true);
@@ -53,7 +54,6 @@ include("mysql_connect.inc.php");
     </style>
 </head>
 <body>
-
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -194,9 +194,9 @@ include("mysql_connect.inc.php");
 
                 <script language="Javascript">
                     document.write('<a href="http://www.free-counter.jp/"></a>');</script><noscript>
-                    <a href="">カウンター</a><a href="http://hqm.f-counter.com/">カウンター</a></noscript>
-                <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href=""><img src="https://www.f-counter.net/ani1/29/1513700600/" alt="カウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
-                            <td><a href=""><img src="https://www.f-counter.net/ani2/29/1513700600/" alt="カウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
+                    <a >カウンター</a><a href="http://hqm.f-counter.com/">カウンター</a></noscript>
+                <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a><img src="https://www.f-counter.net/ani1/29/1513700600/" alt="カウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
+                            <td><a ><img src="https://www.f-counter.net/ani2/29/1513700600/" alt="カウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
 
             </div>
             </div>
@@ -206,7 +206,7 @@ include("mysql_connect.inc.php");
         </div>
         <div class="col-sm-3">
             <div class="well">
-<!--                <p>Some text..</p>-->
+                <p style="text-align:center">  <img style="height: 200px;width: 200px;" alt="Image" src="Tech/pic/QR_Code_.png" "></p>
             </div>
 <!--            <div class="well">-->
 <!--               <p>Some text..</p>-->

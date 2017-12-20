@@ -118,10 +118,16 @@ include("mysql_connect.inc.php");
 <!--<div class="text-left">-->
 <hr >
 <div class="container">
-    <div class="row">
-        <div class="col-sm-3">
-        </div>
-        <div class="col-sm-6">
+    <h2>Dynamic Tabs</h2>
+    <p>Todo</p>
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Text Mining</a></li>
+        <li><a data-toggle="tab" href="#menu1">Bibliometrics</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
             <ul>
                 <span style="  font-size:2em ;"> <li >Text Mining</li></span>
                 <li style="list-style-type: circle"><a href="http://dns2.asia.edu.tw/~jdwang/corpus.htm">Corpus</a></li>
@@ -157,6 +163,21 @@ include("mysql_connect.inc.php");
                 </div>
 
             </ul>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3></h3>
+            <p>0</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+        </div>
+        <div class="col-sm-6">
+
         </div>
         <div class="col-sm-3">
 
