@@ -91,42 +91,20 @@ include("mysql_connect.inc.php");
     }
 
 </style>
-<div class="container-fluid1    bg-3 text-center">
 
-    <div class="container">
-
-        <div class="col-sm-4">
-            <div class="row">
-                <ul class="nav nav-pills">
-
-                </ul>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="row">
-                <ul class="nav nav-pills">
-                    <li class="active" ><a href="writing.php">Journal</a></li>
-                    <li ><a href="wr/ic.html">International Conference</a></li>
-                    <li ><a href="wr/dc.html">Domestic Conference</a></li>
-                </ul>
-            </div>
-
-
-
-        </div>
-    </div>
-</div>
 <!--<div class="text-left">-->
 <hr >
 <div class="container">
+    <h2>著作</h2>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Journal</a></li>
+        <li><a data-toggle="tab" href="#menu1">International Conference</a></li>
+        <li><a data-toggle="tab" href="#menu2">Domestic Conference</a></li>
+    </ul>
 
-    <div class="col-sm-3">
-        <div class="row">
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="row">
-
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3>Journal</h3>
             <p>1.A Novel Approach to Extract Significant Time Interval Patterns of Vehicles from Freeway Gantry Timestamp Sequences
                 <span style="font-weight: bolder"> Jing-Doo Wang</span> and Ming-Chorng Hwang
                 Applied Sciences, 2017, 7(9), 878; doi:10.3390/app7090878. (SCIE, IF=1.679)
@@ -140,22 +118,41 @@ include("mysql_connect.inc.php");
             <p>3.Shape Query for Pattern History in PubMed Literatures via Haar Wavelet
                 <span style="font-weight: bolder">Jing-Doo Wang</span>Zhong-Kai Jiang,Jui-Chi Chen
                 International Journal of Advanced Information Technologies(IJAIT), Vol. 9 ;No. 6. pp. 67-76, December 2015.</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>International Conference</h3>
+            <p>1.Extracting the Co-occurrences of DNA Maximal Repeats in both Human and Viruses
+                <span style="font-weight: bolder"> Jing-Doo Wang, </span>Yi-Chun Wang and Rouh-Mei Hu and Jeffrey Tsai
+                The 17th IEEE International Conference on BioInformatics and BioEngineering (BIBE 2017), pages 106-111, October 23 – 25, 2017. Washington DC, U.S.A.</p>
 
+            <p>2.A Novel Approach to Improve Quality Control by Comparing the Tagged Sequences of Product Traceability
+                <span style="font-weight: bolder"> Jing-Doo Wang,</span>
+                2017 The 3rd International Conference on Inventions, 29 September–2 October 2017, Sun Moon Lake, Taiwan</p>
 
-
+            <p>3.A Novel Approach to Extract Significant Time Intervals of Vehicles from Superhighway Gantry Timestamp Sequences
+                <span style="font-weight: bolder"> Jing-Doo Wang,</span> and Ming-Chorng Hwang,
+                2017 IEEE International Conference on Applied System Innovation (IEEE ICASI 2017) May 13-17, 2017,Hotel emisia, Sapporo, Japan (First Prize Paper Award) (Extended version submitted to Applied Sciences as a Special Issue "Selected Papers from IEEE ICASI 2017")</p>
 
         </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3>Domestic Conference</h3>
+            <p>1.提升Hadoop MapReduce計算效能之研究-以抽取樣式歷史為例
+                陳彥棠、 <span style="font-weight: bolder">王經篤</span>
+                2015中華民國系統科學與工程研討會，2015年 7 月17-19日,大同大學</p>
 
-    </div>
-    <div class="col-sm-3">
-        <div class="row">
+            <p>2.樣式歷史資料之形狀查詢-藉由Haar小波
+                <span style="font-weight: bolder">王經篤</span>、蔣中凱、陳瑞奇
+                2015年資訊科技國際研討會暨民生電子論壇
+                The 9th International Conference on Advanced Information Technologies /
+                Consumer Electronics Forum (AIT/CEF 2015), 2015年 4 月24、25 日,朝陽科技大學, pages 1239-1254</p>
 
-
+            <p>3.社群網站使用者上線時段分析-以批踢踢為例
+                郭佳霖、 <span style="font-weight: bolder">王經篤</span>
+                2014 數位科技與創新管理研討會,2014年6月14日,華梵大學</p>
         </div>
     </div>
-
-    <br>
 </div>
+
 </div>
 
 
@@ -164,7 +161,7 @@ include("mysql_connect.inc.php");
 <br><br>
 
 <footer class="container-fluid text-center">
-    <p>ａｓｉａ</p>
+    <p>@developing by jun</p>
 </footer>
 
 

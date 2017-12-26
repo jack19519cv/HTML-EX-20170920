@@ -88,38 +88,18 @@ include("mysql_connect.inc.php");
     .lists{
         list-style-type: square;
     }
+    .listc1{
+        list-style-type: circle;
+    }
+
 
 </style>
-<div class="container-fluid1    bg-3 text-center">
 
-    <div class="container">
-
-        <div class="col-sm-4">
-            <div class="row">
-                <ul class="nav nav-pills">
-
-                </ul>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="row">
-                <ul class="nav nav-pills">
-                    <li class="active"><a href="Academic.html">Text Mining</a></li>
-                    <li ><a href="acaco/Bibliometrics.html">Bibliometrics</a></li>
-
-                </ul>
-            </div>
-
-
-
-        </div>
-    </div>
-</div>
 <!--<div class="text-left">-->
 <hr >
 <div class="container">
-    <h2>Dynamic Tabs</h2>
-    <p>Todo</p>
+    <h2>Academic</h2>
+<!--    <p>Todo</p>-->
 
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#home">Text Mining</a></li>
@@ -165,8 +145,35 @@ include("mysql_connect.inc.php");
             </ul>
         </div>
         <div id="menu1" class="tab-pane fade">
-            <h3></h3>
-            <p>0</p>
+            <ul>
+                <span style="  font-size:2em ;"> <li >Shape Query</li></span>
+                <span style="  font-size:2em ;"> <li >  Hierarchical Taxonomy Construction</li></span>
+                <div class="listc">
+                    <li>Text</li>
+                    <li>Biology</li>
+                    <li><a href="https://goo.gl/aTg3x0">湯森林</a></li>
+
+
+
+
+
+                </div>
+
+                <span style="  font-size:2em ;"> <li > Class Ambiguity Regions Detection</li></span>
+
+                <div class="listc1">
+                    <li><a href="https://goo.gl/4QJYkR"> evaluating_the_fitness_of_class.htm</a></li>
+                    <li>Hyper-Graph Partition Algorithm</li>
+                </div>
+                <span style="  font-size:2em ;"> <li >Cluster Analyses</li></span>
+                <div class="listc1">
+                    <li><a href="https://goo.gl/NNyVvQ">Survey of clustering-validation techniques</a></li>
+                    <li><a href="">[跨領域][資訊][醫療] 成大標竿計畫：整合臨床、基因組及蛋白質體資料分析之智慧型疾病生物標記探勘平台</a></li>
+                </div>
+            </ul>
+
+
+
         </div>
 
     </div>
@@ -196,7 +203,7 @@ include("mysql_connect.inc.php");
 <br><br>
 
 <footer class="container-fluid text-center">
-    <p>ａｓｉａ</p>
+    <p>@developing by jun</p>
 </footer>
 
 

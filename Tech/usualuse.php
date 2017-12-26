@@ -108,56 +108,110 @@ include("mysql_connect.inc.php");
 <!--                    <li class="active" ><a href="writing.php">Journal</a></li>-->
 <!--                </ul>-->
             </div>
-
-
-
         </div>
     </div>
 </div>
 <!--<div class="text-left">-->
 <hr >
+<!--<div class="container">-->
+<!---->
+<!--    <div class="col-sm-3">-->
+<!--        <div class="row">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-6">-->
+<!--        <div class="row">-->
+<!---->
+<!---->
+<!--        </div>-->
+<!---->
+<!--    </div>-->
+<!--    <div class="col-sm-3">-->
+<!--        <div class="row">-->
+<!---->
+<!---->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--    <br>-->
+<!--</div>-->
+
 <div class="container">
+    <h2 style="text-align: center; font-weight: bolder;">常用連結</h2>
 
-    <div class="col-sm-3">
-        <div class="row">
-        </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="row">
+    <table class="table">
+        <thead>
+<!--        <tr>-->
+<!--          <th>Firstname</th>-->
+<!--            <th style="font-size: 2em">常用連結</th>-->
+<!--            <th>Email</th>-->
+<!--        </tr>-->
+        </thead>
+        <tbody>
+        <tr class="info">
 
-            <p ><a href="http://www.facebook.com/">Facebook<a/></p>
-            <p><a href="https://code.google.com/p/windoop/" >Hadoop<a/></p>
-            <p><a href="https://www.google.com.tw/">Google<a/></p>
-            <p><a href="http://mail.google.com/">GMail<a/></p>
+            <td><a href="http://www.facebook.com/">Facebook</a></td>
+            <td><a href="https://code.google.com/p/windoop/" >Hadoop</a></td>
+            <td><a href="https://www.google.com.tw/">Google</a></td>
 
-        <p>English Learning<p>
-        <p><a href="https://www.liveabc.com/site/Online_Store/member/ok3.asp">LiveABC<a/></p>
-        <p><a href="http://mws.ust.hk/mw/account/login.php">My Words<a/></p>
-        <p><a href="http://wordneighbors.ust.hk/">Word Neighbors<a/></p>
-        <p><a href="http://egg.ust.hk/cl3/index.html">EGG ( English Grammar Guide)<a/></p>
-        <p><a href="http://www.ted.com/">TED (Technology, Entertainment, Design)<a/></p>
-        <p><a href="http://quod.lib.umich.edu/m/micase/">MICASE<a/>(Michigan Corpus of Academic Spoken English)</p>
-        <p><a href="http://www.pbs.org/">PBS<a/>(Public Broadcasting Service)</p>
-        <p><a href="http://hk.dictionary.yahoo.com/">Yahoo!字典<a/></p>
-        <p><a href="http://www.netspeak.org/">netspeak<a/></p>
-        <p><a href="http://www.onlinedict.com/">顏氏美語<a/>
-            ,<a href="http://dictionary.sina.com.tw/">新浪字典<a/>
-            ,<a href="http://cdict.net/">英漢字典(English-Chinese Dictionary<a/></p>
+        </tr>
+        <tr class="warning" >
+
+            <td style="text-align: right"><img style="width: 20px; height: 20px; " alt="Image" src="pic/arrow-down.png" ></td>
+            <td >English Learning <img style="width: 20px;height: 20px; text-align: left"  alt="Image" src="pic/arrow-down.png" ></td>
+            <td></td>
+
+        </tr>
+        <tr class="active">
+            <td><a href="https://www.liveabc.com/site/Online_Store/member/ok3.asp">LiveABC</a></td>
+            <td><a href="http://mws.ust.hk/mw/account/login.php">My Words</a></td>
+            <td><a href="http://wordneighbors.ust.hk/">Word Neighbors</a></td>
+
+        </tr>
+        <tr class="info">
+            <td><a href="http://egg.ust.hk/cl3/index.html">EGG ( English Grammar Guide)</a></td>
+            <td><a href="http://www.ted.com/">TED (Technology, Entertainment, Design)</a></td>
+            <td><a href="http://quod.lib.umich.edu/m/micase/">MICASE</a>(Michigan Corpus of Academic Spoken English)</td>
+
+        </tr>
+        <tr class="active" >
+            <td><a href="http://www.pbs.org/">PBS</a>(Public Broadcasting Service)</td>
+            <td><a href="http://hk.dictionary.yahoo.com/">Yahoo!字典</a></td>
+            <td><a href="http://www.netspeak.org/">netspeak</a></td>
 
 
-        </div>
+        </tr>
+        <tr class="info">
+            <td><a href="http://www.onlinedict.com/">顏氏美語</a></td>
+            <td><a href="http://dictionary.sina.com.tw/">新浪字典</a></td>
+            <td><a href="http://cdict.net/">英漢字典(English-Chinese Dictionary</a></td>
 
-    </div>
-    <div class="col-sm-3">
-        <div class="row">
+        </tr>
+        <tr class="active">
+            <td><a href="https://fitbir-demo.cit.nih.gov/">Federal Interagency TBI Research (FITBIR) Informatics System</a></td>
+            <td><a href="https://www.draw.io/">https://www.draw.io/</a></td>
+            <td><a href="http://www.citeulike.org/bibtex_options">BibTeX Export</a></td>
 
+        </tr>
+        <tr class="info">
+            <td><a href="http://www.citeulike.org/">citeulike</a></td>
+            <td><a href="https://www.most.gov.tw/">科技部</a></td>
+            <td><a href="http://dns2.asia.edu.tw/~jdwang/project/evaluating_the_fitness_of_class.htm">Project</a></td>
 
-        </div>
-    </div>
+        </tr>
+        <tr class="active">
+            <td><a href="http://www.asia.edu.tw/">亞洲大學</a></td>
+            <td><a href="http://cip.asia.edu.tw/login.php">校園入口網站</a></td>
+            <td><a href="https://sslvpn9.twaren.net/dana-na/auth/%28asia%29url_default/welcome.cgi">亞洲大學SSL VPN</a></td>
 
-    <br>
+        </tr>
+        <tr class="info">
+        <td><a href="http://study.asia.edu.tw/">讀書會/學習社群Learning Groups</a></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-</div>
+
 
 
 <br>
@@ -165,7 +219,7 @@ include("mysql_connect.inc.php");
 <br><br>
 
 <footer class="container-fluid text-center">
-    <p>ａｓｉａ</p>
+    <p>@developing by jun</p>
 </footer>
 
 

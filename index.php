@@ -96,21 +96,21 @@ include("mysql_connect.inc.php");
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="Tech/pic/top.jpg" style="height: 500px" alt="Image">
+                        <img src="Tech/pic/top.jpg" style="height: 450px" alt="Image">
                         <div class="carousel-caption">
                             <h3>Asia</h3>
                             <p>university</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="Tech/pic/csie.png" style="height: 500px" alt="Image">
+                        <img src="Tech/pic/csie.png" style="height: 450px" alt="Image">
                         <div class="carousel-caption">
                             <span style="color:#ffcb20;"> <h3 >Asia</h3></span>
                             <span style="color:#000000;">  <p>csie</p></span>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="Tech/pic/forst.jpeg"  style="height: 500px" alt="Image">
+                        <img src="Tech/pic/forst.jpeg"  style="height: 400px" alt="Image">
                         <div class="carousel-caption">
                             <h3>wait</h3>
                             <p>push</p>
@@ -206,7 +206,7 @@ include("mysql_connect.inc.php");
         </div>
         <div class="col-sm-3">
             <div class="well">
-                <p style="text-align:center">  <img style="height: 200px;width: 200px;" alt="Image" src="Tech/pic/QR_Code_.png" "></p>
+                <p style="text-align:center">  <img style="height: 200px;width: 200px;" alt="Image" src="Tech/pic/QR_Code_.png" ></p>
             </div>
 <!--            <div class="well">-->
 <!--               <p>Some text..</p>-->
@@ -249,7 +249,7 @@ include("mysql_connect.inc.php");
 <br>
 
 <footer class="container-fluid text-center">
-    <p>Developing</p>
+    <p>@developing by jun</p>
 </footer>
 
 </body>
