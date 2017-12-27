@@ -20,6 +20,7 @@ if($id != null && $pw != null && $row[0] == $id && $row[2] == sha1($pw))
 {
     //將帳號寫入session，方便驗證使用者身份
     $_SESSION['id'] = $id;
+    require_once (mailertest.php);
     echo '登入成功!';
     echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 }

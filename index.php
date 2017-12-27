@@ -110,7 +110,7 @@ include("mysql_connect.inc.php");
                         </div>
                     </div>
                     <div class="item">
-                        <img src="Tech/pic/forst.jpeg"  style="height: 400px" alt="Image">
+                        <img src="Tech/pic/forst.jpeg"  style="height: 450px" alt="Image">
                         <div class="carousel-caption">
                             <h3>wait</h3>
                             <p>push</p>
@@ -129,18 +129,18 @@ include("mysql_connect.inc.php");
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <button onclick="myFunction()">需要輸入名子嗎?</button>
+<!--            <button onclick="myFunction()">需要輸入名子嗎?</button>-->
             <p id="demo"></p>
-            <script>
-                function myFunction() {
-                var a = prompt("Please enter your name", "未輸入");
-
-                if (a != null) {
-                    document.getElementById("demo").innerHTML = "您輸入的名子在這裡:"+a;
-
-                }
-                }
-            </script>
+<!--            <script>-->
+<!--                function myFunction() {-->
+<!--                var a = prompt("Please enter your name", "未輸入");-->
+<!---->
+<!--                if (a != null) {-->
+<!--                    document.getElementById("demo").innerHTML = "您輸入的名子在這裡:"+a;-->
+<!---->
+<!--                }-->
+<!--                }-->
+<!--            </script>-->
 
         </div>
         <div class="col-sm-4">
