@@ -100,10 +100,17 @@ include("mysql_connect.inc.php");
         <li class="active"><a data-toggle="tab" href="#home">Journal</a></li>
         <li><a data-toggle="tab" href="#menu1">International Conference</a></li>
         <li><a data-toggle="tab" href="#menu2">Domestic Conference</a></li>
+        <?php   if($_SESSION['id'] != null){echo"<li><a data-toggle=\"tab\" href=\"#menu3\">Journal新增</a></li>";
+
+            $sql = "SELECT * FROM `writingData`";
+
+        $result = mysqli_query($connect,$sql);
+            ?>
     </ul>
 
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
+
             <h3>Journal</h3>
             <p>1.A Novel Approach to Extract Significant Time Interval Patterns of Vehicles from Freeway Gantry Timestamp Sequences
                 <span style="font-weight: bolder"> Jing-Doo Wang</span> and Ming-Chorng Hwang
@@ -150,6 +157,22 @@ include("mysql_connect.inc.php");
                 郭佳霖、 <span style="font-weight: bolder">王經篤</span>
                 2014 數位科技與創新管理研討會,2014年6月14日,華梵大學</p>
         </div>
+        <div id="menu3" class="tab-pane fade">
+            <form name="form" method="post" action="../write_finish.php">
+                tag：<input type="text" name="tag" /> <br>
+                <div class="well">
+                body：<textarea name="body" cols="45" rows="5"></textarea> <br>
+                </div>
+                date：<input type="text" name="date" /> <br>
+                type：<input type="text" name="type" /> <br><br>
+
+                <input type="submit" name="button" value="確定" />
+            </form>
+
+<?php  }?>
+        </div>
+
+
     </div>
 </div>
 

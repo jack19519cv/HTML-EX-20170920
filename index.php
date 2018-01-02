@@ -23,10 +23,12 @@ include("mysql_connect.inc.php");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
     <?php
     include ("function_for_GoogleFont.php");
     googlefontset(true);
     ?>
+
     <style>
         /* Add a gray background color and some padding to the footer */
         footer {
@@ -49,11 +51,16 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
+        body {
+            background: lightblue url("Tech/pic/background2.jpg") no-repeat fixed center;
+        }
 
 
     </style>
 </head>
 <body>
+
+<!--//test-->
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -103,7 +110,7 @@ include("mysql_connect.inc.php");
                         </div>
                     </div>
                     <div class="item">
-                        <img src="Tech/pic/csie.png" style="height: 450px" alt="Image">
+                        <img src="Tech/pic/csie1.jpg" style="height: 450px" alt="Image">
                         <div class="carousel-caption">
                             <span style="color:#ffcb20;"> <h3 >Asia</h3></span>
                             <span style="color:#000000;">  <p>csie</p></span>
@@ -150,22 +157,21 @@ include("mysql_connect.inc.php");
 
             </div>
             <div class="well">
-                <?php      include("member.php");
+                <?php      include("basedata.php");
 
                 while($row = mysqli_fetch_row($result))
                 {mysqli_set_charset($link,'utf8');?>
                 <h1 > <?php   echo " $row[2]<br> " ?></h1>
-                <p> 亞洲大學 資訊工程系 副教授</p>
+                <p> <?php   echo " $row[6]<br> " ?></p>
             </div>
             <div class="well">
                 <?php
 
 
 //                    id：$row[0]<br>
-                    echo " email：$row[1]<br> " .
-                        " Eng_name：$row[3]<br> degree：$row[4]<br> exp：$row[5] <br> position：$row[6]
-             <br> officeroom：$row[7]<br> fax：$row[8] <br> phone：$row[9] <br> research：$row[10]<br>";
-                }
+                    echo " Email：$row[1]<br> " .
+                        " Eng_name：$row[3]<br>Degree：$row[4]<br>  OfficeRoom：$row[7]<br> fax：$row[8] <br> Phone：$row[9] <br> ";
+
 
 
                 ?>
@@ -181,15 +187,19 @@ include("mysql_connect.inc.php");
     <br>
     <div class="row">
         <div class="col-sm-3">
+            <div class="well">
 
-<!--            <p>wait</p>-->
+                <p> <?php   echo "Experience： $row[5]<br> " ?></p>
+            </div>
         </div>
         <div class="col-sm-3">
-<!--            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">-->
-<!--            <p>Project 2</p>-->
+            <div class="well">
+                <p> <?php   echo "Research： $row[10]<br> " ?></p>
+                <?php } ?>
+            </div>
         </div>
         <div class="col-sm-3">
-            <div class="col-lg-6 col-lg-offset-3">
+<!--            <div class="col-lg-6 col-lg-offset-3">-->
             <div class="well">
 
                 <script language="Javascript">
@@ -199,7 +209,7 @@ include("mysql_connect.inc.php");
                             <td><a ><img src="https://www.f-counter.net/ani2/29/1513700600/" alt="カウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
 
             </div>
-            </div>
+<!--            </div>-->
 <!--            <div class="well">-->
 <!--              <p>Some text..</p>-->
 <!--            </div>-->
