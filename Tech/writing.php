@@ -101,7 +101,7 @@ include("mysql_connect.inc.php");
         <li><a data-toggle="tab" href="#menu1">International Conference</a></li>
         <li><a data-toggle="tab" href="#menu2">Domestic Conference</a></li>
         <?php   if($_SESSION['id'] != null){echo"<li><a data-toggle=\"tab\" href=\"#menu3\">Journal新增</a></li>";
-
+        }
             $sql = "SELECT * FROM `writingData`";
 
         $result = mysqli_query($connect,$sql);
@@ -169,7 +169,7 @@ include("mysql_connect.inc.php");
                 <input type="submit" name="button" value="確定" />
             </form>
 
-<?php  }?>
+<?php if($_SESSION['id'] != null)  ?>
         </div>
 
 

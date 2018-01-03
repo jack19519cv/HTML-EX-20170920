@@ -136,6 +136,14 @@ include("mysql_connect.inc.php");
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+            <button ><a href="pdfCrator.php" target="_blank">pdfCrator_test</a></button>
+            <?php if($_SESSION['id'] != null) {
+
+                ?>
+                <span style="text-align: center; color: #d43f3a;font-size: 10em"> <a>登出</a ></span>
+                <?php
+            }
+            ?>
 <!--            <button onclick="myFunction()">需要輸入名子嗎?</button>-->
             <p id="demo"></p>
 <!--            <script>-->
@@ -259,6 +267,7 @@ include("mysql_connect.inc.php");
 <br>
 
 <footer class="container-fluid text-center">
+
     <p>@developing by jun</p>
 </footer>
 
