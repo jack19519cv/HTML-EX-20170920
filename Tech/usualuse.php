@@ -22,11 +22,51 @@ include("mysql_connect.inc.php");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <?php
     include ("../function_for_GoogleFont.php");
     googlefontset(true)
     ?>
     <style>
+/*bg test*/
+* { box-sizing: border-box; }
+.video-background {
+    background: #000;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+#vidtop-content {
+    top: 0;
+    color: #fff;
+}
+.vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+.vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+.vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+@media (min-aspect-ratio: 16/9) {
+    .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+    .video-foreground { width: 300%; left: -100%; }
+}
+@media all and (max-width: 600px) {
+    .vid-info { width: 50%; padding: .5rem; }
+    .vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+    .vid-info .acronym { display: none; }
+}
+/*bg test*/
+
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
 
@@ -43,10 +83,26 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
+<?php if($_SESSION['id'] != null) {?>
+body {
+
+    background: lightblue url() no-repeat fixed center;
+}
+<?php
+
+}
+        ?>
     </style>
 </head>
 <body>
+<div class="video-background">
+    <div class="video-foreground">
 
+        <iframe src="https://www.youtube.com/embed/8_2SJvPzp6o?vq=hd720&controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!--test-->
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -74,6 +130,7 @@ include("mysql_connect.inc.php");
         </div>
     </div>
 </nav>
+
 
 
 <style>
@@ -111,8 +168,12 @@ include("mysql_connect.inc.php");
         </div>
     </div>
 </div>
+<br>
+<br>
+<br>
+
 <!--<div class="text-left">-->
-<hr >
+<!--<hr >-->
 <!--<div class="container">-->
 <!---->
 <!--    <div class="col-sm-3">-->
@@ -137,7 +198,7 @@ include("mysql_connect.inc.php");
 <!--</div>-->
 
 <div class="container">
-    <h2 style="text-align: center; font-weight: bolder;">常用連結</h2>
+    <h2 style="text-align: center; font-weight: bolder; color: #f9f9f9">常用連結</h2>
 
     <table class="table">
         <thead>
@@ -218,9 +279,12 @@ include("mysql_connect.inc.php");
 
 <br><br>
 
+
+
 <footer class="container-fluid text-center">
     <p>@developing by jun</p>
 </footer>
+
 
 
 </body>

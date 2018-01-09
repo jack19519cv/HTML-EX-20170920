@@ -40,7 +40,7 @@ if($_SESSION['id'] != null )
     }
     else
     {
-        echo '修改失敗!';
+        echo '修改失敗!_not allow null';
         echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
     }
 }

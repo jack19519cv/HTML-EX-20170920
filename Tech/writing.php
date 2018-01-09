@@ -43,6 +43,15 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
+        <?php if($_SESSION['id'] != null) {?>
+        body {
+
+            background: lightblue url() no-repeat fixed center;
+        }
+        <?php
+
+        }
+                ?>
     </style>
 </head>
 <body>
@@ -101,6 +110,7 @@ include("mysql_connect.inc.php");
         <li><a data-toggle="tab" href="#menu1">International Conference</a></li>
         <li><a data-toggle="tab" href="#menu2">Domestic Conference</a></li>
         <?php   if($_SESSION['id'] != null){echo"<li><a data-toggle=\"tab\" href=\"#menu3\">Journal新增</a></li>";
+           echo"<li><a data-toggle=\"tab\" href=\"#menu4\">Journal刪除</a></li>";
         }
             $sql = "SELECT * FROM `writingData`";
 
@@ -112,19 +122,12 @@ include("mysql_connect.inc.php");
         <div id="home" class="tab-pane fade in active">
 
             <h3>Journal</h3>
-            <p>1.A Novel Approach to Extract Significant Time Interval Patterns of Vehicles from Freeway Gantry Timestamp Sequences
-                <span style="font-weight: bolder"> Jing-Doo Wang</span> and Ming-Chorng Hwang
-                Applied Sciences, 2017, 7(9), 878; doi:10.3390/app7090878. (SCIE, IF=1.679)
-                (Special Issue "Selected Papers from IEEE ICASI 2017")</p>
 
-            <p>2.Extracting Significant Pattern Histories from Timestamped Texts using MapReduce
-                <span style="font-weight: bolder">Jing-Doo Wang</span>
-                Journal of Supercomputing, 72(8), pp. 3236-3260, DOI 10.1007/s11227-016-1713-z,, April 2016
-                (SCI, SCIE 2014 JCR ,IF=0.858,RANK=56/102, COMPUTER SCIENCE, THEORY & METHODS)</p>
+<?php include ("writing_change.php");
+include ("writingdata.php");
 
-            <p>3.Shape Query for Pattern History in PubMed Literatures via Haar Wavelet
-                <span style="font-weight: bolder">Jing-Doo Wang</span>Zhong-Kai Jiang,Jui-Chi Chen
-                International Journal of Advanced Information Technologies(IJAIT), Vol. 9 ;No. 6. pp. 67-76, December 2015.</p>
+?>
+
         </div>
         <div id="menu1" class="tab-pane fade">
             <h3>International Conference</h3>
@@ -158,18 +161,15 @@ include("mysql_connect.inc.php");
                 2014 數位科技與創新管理研討會,2014年6月14日,華梵大學</p>
         </div>
         <div id="menu3" class="tab-pane fade">
-            <form name="form" method="post" action="../write_finish.php">
-                tag：<input type="text" name="tag" /> <br>
-                <div class="well">
-                body：<textarea name="body" cols="45" rows="5"></textarea> <br>
-                </div>
-                date：<input type="text" name="date" /> <br>
-                type：<input type="text" name="type" /> <br><br>
-
-                <input type="submit" name="button" value="確定" />
-            </form>
-
-<?php if($_SESSION['id'] != null)  ?>
+<?php if($_SESSION['id'] != null){
+    include ("../writingRe.php");
+}
+    ?>
+        </div>
+        <div id="menu4" class="tab-pane fade">
+            <?php
+            include("writing_delete.php")
+            ?>
         </div>
 
 

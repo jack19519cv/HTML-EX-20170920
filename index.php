@@ -51,14 +51,29 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
+        <?php if($_SESSION['id'] != null) {?>
         body {
-            background: lightblue url("Tech/pic/background2.jpg") no-repeat fixed center;
+
+            background: lightblue url() no-repeat fixed center;
         }
+<?php
+
+}else{
+        ?>
+        body {
+
+            background:  url("Tech/pic/background2.jpg") no-repeat fixed center;
+        }
+<?php
+}
+?>
+
 
 
     </style>
 </head>
 <body>
+
 
 <!--//test-->
 <nav class="navbar navbar-inverse">
@@ -88,6 +103,9 @@ include("mysql_connect.inc.php");
 <!--            </nav>-->
     </div>
 </nav>
+
+
+
 
 <div class="container">
     <div class="row">
@@ -136,11 +154,11 @@ include("mysql_connect.inc.php");
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <button ><a href="pdfCrator.php" target="_blank">pdfCrator_test</a></button>
+<!--            <button ><a href="pdfCrator.php" target="_blank">pdfCrator_test</a></button>-->
             <?php if($_SESSION['id'] != null) {
 
                 ?>
-                <span style="text-align: center; color: #d43f3a;font-size: 10em"> <a>登出</a ></span>
+                <span style="text-align: center; font-size: 8em"> <a style="color: #951d1a">登入中</a ></span>
                 <?php
             }
             ?>
@@ -213,8 +231,8 @@ include("mysql_connect.inc.php");
                 <script language="Javascript">
                     document.write('<a href="http://www.free-counter.jp/"></a>');</script><noscript>
                     <a >カウンター</a><a href="http://hqm.f-counter.com/">カウンター</a></noscript>
-                <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a><img src="https://www.f-counter.net/ani1/29/1513700600/" alt="カウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
-                            <td><a ><img src="https://www.f-counter.net/ani2/29/1513700600/" alt="カウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
+                <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a><img src="https://www.f-counter.net/ani1/29/1513700600/" alt="カウンター" border="0" style="margin:0; padding:0; border:0; vertical-align:bottom"></a></td>
+                            <td><a ><img src="https://www.f-counter.net/ani2/29/1513700600/" alt="カウンター" border="0" style="margin:0; padding:0; border:0; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
 
             </div>
 <!--            </div>-->
@@ -265,6 +283,10 @@ include("mysql_connect.inc.php");
 <!--    </div>-->
 <!--</div>-->
 <br>
+
+<!--        </div>-->
+
+
 
 <footer class="container-fluid text-center">
 

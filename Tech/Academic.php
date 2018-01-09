@@ -42,6 +42,15 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
+        <?php if($_SESSION['id'] != null) {?>
+        body {
+
+            background: lightblue url("") no-repeat fixed center;
+        }
+        <?php
+
+        }
+                ?>
     </style>
 </head>
 <body>
