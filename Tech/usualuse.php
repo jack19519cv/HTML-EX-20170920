@@ -281,13 +281,14 @@ body {
 
 
 
+
+
+
 <footer class="container-fluid text-center">
     <p>@developing by jun</p>
 </footer>
-
-
-
 </body>
+
 </html>
 
 

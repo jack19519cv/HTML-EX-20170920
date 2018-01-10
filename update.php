@@ -13,7 +13,7 @@ googlefontset(true);
     <style>
 
     body {
-    background: lightblue url("#") no-repeat fixed center;
+    background: #e6dba0 url() no-repeat fixed center;
     }
     textarea style=width:300px;height:100px;
         </style>

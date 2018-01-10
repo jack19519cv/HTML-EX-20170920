@@ -6,7 +6,7 @@ include("mysql_connect.inc.php");
 
 
 $id = $_POST['id'];
-$email = $_POST['email'];
+$email = $_POST['email '];
 $nameC = $_POST['nameC'];
 $nameE = $_POST['nameE'];
 $degree = $_POST['degree'];

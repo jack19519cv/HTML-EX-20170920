@@ -123,7 +123,8 @@ include("mysql_connect.inc.php");
 
             <h3>Journal</h3>
 
-<?php include ("writing_change.php");
+<?php
+include ("writing_change.php");
 include ("writingdata.php");
 
 ?>

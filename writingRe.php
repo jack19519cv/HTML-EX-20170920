@@ -7,7 +7,7 @@ mysqli_set_charset($connect,'utf8');
 include("Tech/get_journal_size.php");
 ?>
     <form name="form" method="post" action="../write_finish.php">
-        編號：<input type="text" name="tag" /> <br><br>
+        編號(題目)：<input type="text" name="tag" /> <br><br>
         <div class="well">
             body：<br><textarea name="body" cols="80" rows="10"></textarea> <br>
         </div>

@@ -4,7 +4,7 @@
 if($_SESSION['id'] != null)
 {
     echo "<form name=\"form\" method=\"post\" action=\"writing_delete_finish.php\">";
-    echo "要刪除的：<input type=\"text\" name=\"tag\" /> <br>";
+    echo "要刪除的題目：<input type=\"text\" name=\"tag\" /> <br>";
     echo "<input type=\"submit\" name=\"button\" value=\"刪除\" />";
     echo "</form>";
 }
