@@ -1,5 +1,12 @@
 <!-- 設定網頁編碼為UTF-8 -->
 <html lang="en" xmlns:margin-right="http://www.w3.org/1999/xhtml">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="CSS/cotm.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <!--font-family: 'Dancing Script', cursive;-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <head>
@@ -14,6 +21,7 @@
 
 </style>
 </head>
+<div class="container">
 <form name="form" method="post" action="connect.php">
 
 
@@ -39,14 +47,17 @@
 
             <div class="form-group">
                 <input type="submit" name="button" class="btn btn-block btn-lg btn-primary" value="登入"/>
-                <span class="pull-right" ><a href="#">Register</a></span><span ><a href="index.php">首頁</a></span>
+<!--                <span class="pull-right" ><a href="#">Register</a></span>-->
+                <span ><a href="index.php">首頁</a></span>
                 </body>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 </form>
+
 </html >
 <!--    帳號：<input  type="text" name="id" /> <br>-->
 <!--    密碼：<input  type="password" name="pw" /> <br>-->

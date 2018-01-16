@@ -1,4 +1,7 @@
 <?php session_start(); ?>
+ <style>
+
+</style>
 <?php
 
 include("../mysql_connect.inc.php");
@@ -9,11 +12,14 @@ mysqli_set_charset($connect,'utf8');
 //將資料庫裡的所有會員資料顯示在畫面上
 
 //$sql = "SELECT * FROM `writingData`";
-$sql = "SELECT * FROM `writingData` ORDER BY tag ASC ";
+$sql = "SELECT * FROM `writingData` ORDER BY tag DESC ";
 
 $result = mysqli_query($connect,$sql);
 $num_rows = mysqli_num_rows($result);
-
+if($_SESSION['id'] != null ) {
+    $id = $_SESSION['id'];
+    echo "<a href='../writingRe.php'><button class=\"button button1\" >新增</button></a> <br>";
+}
 echo " 共有 $num_rows 篇 \n";
 while($row = mysqli_fetch_row($result)) {
     mysqli_set_charset($link, 'utf8');
@@ -21,8 +27,10 @@ while($row = mysqli_fetch_row($result)) {
 
     <div class="col">
         <div class="well">
-
-            <p> <?php echo " $row[0].  $row[1]" ?></p>
+           <?php  $count= $row[0]-1;
+           $count1=$num_rows-$count;
+           ?>
+            <p> <?php echo "$count1 .  $row[1]" ?></p>
             <p> <?php echo " $row[2]<br> " ?></p>
             <!--    <p> --><?php //  echo " $row[3]<br><br> " ?><!--</p>-->
             <?php
@@ -33,9 +41,21 @@ while($row = mysqli_fetch_row($result)) {
             ?>
 
                 <form name="form" method="post" action="writing_update.php">
-
-            <a type="submit" href="writing_update.php">修改</a>
+                    <?php
+                    echo"<input  type=\"hidden\" name=\"tag\" value=\"$row[0]\" />";
+                    ?>
+                    <input type="submit" class="button button2" name="button" value="修改" />
                 </form>
+                <form name="form" method="post" action="writing_delete_finish.php">
+                    <?php
+                    echo"<input  type=\"hidden\" name=\"tag\" value=\"$row[0]\" />";
+                    ?>
+
+                    <input type="submit" class="button button3" name="button" value="刪除" onClick="tfm_confirmLink('您真的確定要刪除嗎？');return document.MM_returnValue"/>
+<!--                    <input type="submit" class="button button3" name="button" value="刪除" />-->
+                </form>
+
+
             <?php
             }
             ?>

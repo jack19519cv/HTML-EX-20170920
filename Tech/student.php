@@ -9,7 +9,7 @@
 ?>
 <?php session_start(); ?>
 <?php
-include("mysql_connect.inc.php");
+include("../mysql_connect.inc.php");
 
 ?>
 
@@ -43,16 +43,46 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
-        <?php if($_SESSION['id'] != null) {?>
-        body {
-
-            background: lightblue url("") no-repeat fixed center;
+        .well{
+            background: rgb(242,246,248);
+            background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 22%, rgba(181,198,208,1) 71%, rgba(224,239,249,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 22%,rgba(181,198,208,1) 71%,rgba(224,239,249,1) 100%);
+            background: linear-gradient(to bottom, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 22%,rgba(181,198,208,1) 71%,rgba(224,239,249,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 );
         }
+        table#t01 tr:nth-child(even) {
+            background: rgb(238,238,238);
+            background: -moz-linear-gradient(top, rgba(238,238,238,1) 76%, rgba(204,204,204,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(238,238,238,1) 76%,rgba(204,204,204,1) 100%);
+            background: linear-gradient(to bottom, rgba(238,238,238,1) 76%,rgba(204,204,204,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+        }
+        table#t01 tr:nth-child(odd) {
+            background: rgb(242,245,246);
+            background: -moz-linear-gradient(top, rgba(242,245,246,1) 0%, rgba(227,234,237,1) 24%, rgba(242,245,246,1) 84%, rgba(200,215,220,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 24%,rgba(242,245,246,1) 84%,rgba(200,215,220,1) 100%);
+            background: linear-gradient(to bottom, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 24%,rgba(242,245,246,1) 84%,rgba(200,215,220,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 );
+        }
+        table#t01 th {
+            color: white;
+            background: rgb(76,76,76);
+            background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 9%, rgba(102,102,102,1) 17%, rgba(71,71,71,1) 31%, rgba(44,44,44,1) 47%, rgba(0,0,0,1) 61%, rgba(17,17,17,1) 71%, rgba(17,17,17,1) 71%, rgba(17,17,17,1) 82%, rgba(43,43,43,1) 87%, rgba(28,28,28,1) 94%, rgba(19,19,19,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 9%,rgba(102,102,102,1) 17%,rgba(71,71,71,1) 31%,rgba(44,44,44,1) 47%,rgba(0,0,0,1) 61%,rgba(17,17,17,1) 71%,rgba(17,17,17,1) 71%,rgba(17,17,17,1) 82%,rgba(43,43,43,1) 87%,rgba(28,28,28,1) 94%,rgba(19,19,19,1) 100%);
+            background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 9%,rgba(102,102,102,1) 17%,rgba(71,71,71,1) 31%,rgba(44,44,44,1) 47%,rgba(0,0,0,1) 61%,rgba(17,17,17,1) 71%,rgba(17,17,17,1) 71%,rgba(17,17,17,1) 82%,rgba(43,43,43,1) 87%,rgba(28,28,28,1) 94%,rgba(19,19,19,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 );
+        }
+    </style>
+    <?php if($_SESSION['id'] != null) {
+        include("../CSS/dashboard_bg_add.php");
+
+        ?>
         <?php
 
-        }
-                ?>
-    </style>
+    }else{
+        include("../CSS/base_bg_add.php");
+    }
+    ?>
 </head>
 <body>
 
@@ -127,165 +157,172 @@ include("mysql_connect.inc.php");
 <!--<div class="text-left">-->
 <hr >
             <div class="container">
-
-                <table class="table table-bordered">
+                <div class="well">
+                <table class="table table-bordered" id="t01">
                     <thead>
                     <tr>
-                        <th style="text-align:center; color:#0000b1;">學年度 &emsp;&emsp;</th>
-                        <th style="text-align:center; color:#0000b1;">系所</th>
-                        <th style="text-align:center; color:#0000b1; ">姓名</th>
-                        <th style="text-align:center; color:#0000b1;">論文題目</th>
-                        <th style="text-align:center; color:#0000b1;">備註</th>
+                        <th style="text-align:center; ">學年度</th>
+                        <th style="text-align:center; ">系所</th>
+                        <th style="text-align:center;  ">姓名</th>
+                        <th style="text-align:center; ">論文題目</th>
+                        <th style="text-align:center; ">備註</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td style="text-align:center;">102</td>
-                        <td>資訊工程所 (博士班)</td>
-                        <td>Heri Wijayanto</td>
-                        <td></td>
-                        <td>(Indonesia)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">101</td>
-                        <td>資訊工程所</td>
-                        <td>陳彥棠</td>
-                        <td>提升 Hadoop MapReduce 計算效能之研究-以抽取樣式歷史為例
-                            (Promoting the Computational Performance of Hadoop MapReduce for Pattern History Extraction)</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">101</td>
-                        <td>資訊工程所</td>
-                        <td>蔣中凱</td>
-                        <td>樣式歷史資料之形狀查詢-藉由Haar小波
-                            (Shape Query for Pattern History via Haar Wavelet)</td>
-                        <td></td>
-                    </tr>
+                    <?php
+                    include ("student/writing_change.php");
+                    include ("student/writingdata.php");
 
-                    <tr>
-                        <td style="text-align:center;">101</td>
-                        <td>資訊工程所</td>
-                        <td>郭佳霖</td>
-                        <td>社群網站使用者上線時段分析-以批踢踢為例</td>
-                        <td>(2014.6畢業)(102學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">99</td>
-                        <td>資訊工程所</td>
-                        <td>吳健瑋</td>
-                        <td>利用 Hadoop 建立樣式歷史資料趨勢索引</td>
-                        <td>(2014.6畢業)(102學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">99</td>
-                        <td>資訊工程所</td>
-                        <td>許柏凱</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">97</td>
-                        <td>資訊工程所</td>
-                        <td>施耀竣</td>
-                        <td>分類架構模糊度研究-利用鄰近點亂度</td>
-                        <td>(2010.6畢業)(98學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">97</td>
-                        <td>生物資訊所</td>
-                        <td>黃進福</td>
-                        <td>病毒分類研究-藉由基因體序列</td>
-                        <td>(2011.6畢業)(99學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">97</td>
-                        <td>資訊工程所</td>
-                        <td>Arie Budiansyah</td>
-                        <td>Text Trend Analysis from Indonesia Newspaper</td>
-                        <td>(2010.6畢業)(98學年度)(Indonesia)</td>
-                    </tr>
+                    ?>
 
-                    <tr>
-                        <td style="text-align:center;">96</td>
-                        <td>電腦與通訊所</td>
-                        <td>廖益緯</td>
-                        <td>關鍵字之趨勢研究-藉由PubMed文獻</td>
-                        <td>(2010.6畢業)(98學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">96</td>
-                        <td>資訊工程所</td>
-                        <td>劉宣榮</td>
-                        <td>中華民國專利趨勢查詢-藉由顯要事件歷史</td>
-                        <td>(2010.6畢業)(98學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">95</td>
-                        <td>資訊工程所</td>
-                        <td>盧勇凱</td>
-                        <td>病毒分類研究-藉由CDS序列</td>
-                        <td>(2011.6畢業)(99學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">95</td>
-                        <td>生物資訊所</td>
-                        <td>許瀚升</td>
-                        <td>水稻T-DNA插入突變體右翼序列自動化比對系統之建立</td>
-                        <td>(2008.6畢業)(96學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">95</td>
-                        <td>生物資訊所</td>
-                        <td>魏子傑</td>
-                        <td>癌症類別關連研究-藉由生物晶片分析</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">94</td>
-                        <td>生物資訊所</td>
-                        <td>沈晉億</td>
-                        <td>古菌與甲烷代謝有關之獨特胺基酸序列的挖掘--藉由基因體比較</td>
-                        <td>(2008.1畢業)(96學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">93</td>
-                        <td>生物資訊所</td>
-                        <td>張文福</td>
-                        <td>古菌基因體相關於氧氣需求的研究</td>
-                        <td>(2007.6畢業)(95學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">93</td>
-                        <td>生物資訊所</td>
-                        <td>鄒佳芳</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">92</td>
-                        <td>資訊工程所</td>
-                        <td>曾冠燕</td>
-                        <td>生物資訊文獻查詢-利用文件相似度</td>
-                        <td>(2008.1畢業)(96學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">92</td>
-                        <td>資訊工程所</td>
-                        <td>楊季剛</td>
-                        <td>中文新聞相關性事件之挖掘-藉由Haar小波轉換</td>
-                        <td>(2007.1畢業)(95學年度)</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:center;">92</td>
-                        <td>生物資訊所</td>
-                        <td>林炯璁</td>
-                        <td>臨床微生物檢驗的資料挖掘研究－以偵測鮑氏不動桿菌之院內感染為例</td>
-                        <td>(2006.6畢業)(94學年度)</td>
-                    </tr>
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">102</td>-->
+<!--                        <td>資訊工程所 (博士班)</td>-->
+<!--                        <td>Heri Wijayanto</td>-->
+<!--                        <td></td>-->
+<!--                        <td>(Indonesia)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">101</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>陳彥棠</td>-->
+<!--                        <td>提升 Hadoop MapReduce 計算效能之研究-以抽取樣式歷史為例-->
+<!--                            (Promoting the Computational Performance of Hadoop MapReduce for Pattern History Extraction)</td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">101</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>蔣中凱</td>-->
+<!--                        <td>樣式歷史資料之形狀查詢-藉由Haar小波-->
+<!--                            (Shape Query for Pattern History via Haar Wavelet)</td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!---->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">101</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>郭佳霖</td>-->
+<!--                        <td>社群網站使用者上線時段分析-以批踢踢為例</td>-->
+<!--                        <td>(2014.6畢業)(102學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">99</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>吳健瑋</td>-->
+<!--                        <td>利用 Hadoop 建立樣式歷史資料趨勢索引</td>-->
+<!--                        <td>(2014.6畢業)(102學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">99</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>許柏凱</td>-->
+<!--                        <td></td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">97</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>施耀竣</td>-->
+<!--                        <td>分類架構模糊度研究-利用鄰近點亂度</td>-->
+<!--                        <td>(2010.6畢業)(98學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">97</td>-->
+<!--                        <td>生物資訊所</td>-->
+<!--                        <td>黃進福</td>-->
+<!--                        <td>病毒分類研究-藉由基因體序列</td>-->
+<!--                        <td>(2011.6畢業)(99學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">97</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>Arie Budiansyah</td>-->
+<!--                        <td>Text Trend Analysis from Indonesia Newspaper</td>-->
+<!--                        <td>(2010.6畢業)(98學年度)(Indonesia)</td>-->
+<!--                    </tr>-->
+<!---->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">96</td>-->
+<!--                        <td>電腦與通訊所</td>-->
+<!--                        <td>廖益緯</td>-->
+<!--                        <td>關鍵字之趨勢研究-藉由PubMed文獻</td>-->
+<!--                        <td>(2010.6畢業)(98學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">96</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>劉宣榮</td>-->
+<!--                        <td>中華民國專利趨勢查詢-藉由顯要事件歷史</td>-->
+<!--                        <td>(2010.6畢業)(98學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">95</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>盧勇凱</td>-->
+<!--                        <td>病毒分類研究-藉由CDS序列</td>-->
+<!--                        <td>(2011.6畢業)(99學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">95</td>-->
+<!--                        <td>生物資訊所</td>-->
+<!--                        <td>許瀚升</td>-->
+<!--                        <td>水稻T-DNA插入突變體右翼序列自動化比對系統之建立</td>-->
+<!--                        <td>(2008.6畢業)(96學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">95</td>-->
+<!--                        <td>生物資訊所</td>-->
+<!--                        <td>魏子傑</td>-->
+<!--                        <td>癌症類別關連研究-藉由生物晶片分析</td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">94</td>-->
+<!--                        <td>生物資訊所</td>-->
+<!--                        <td>沈晉億</td>-->
+<!--                        <td>古菌與甲烷代謝有關之獨特胺基酸序列的挖掘--藉由基因體比較</td>-->
+<!--                        <td>(2008.1畢業)(96學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">93</td>-->
+<!--                        <td>生物資訊所</td>-->
+<!--                        <td>張文福</td>-->
+<!--                        <td>古菌基因體相關於氧氣需求的研究</td>-->
+<!--                        <td>(2007.6畢業)(95學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">93</td>-->
+<!--                        <td>生物資訊所</td>-->
+<!--                        <td>鄒佳芳</td>-->
+<!--                        <td></td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">92</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>曾冠燕</td>-->
+<!--                        <td>生物資訊文獻查詢-利用文件相似度</td>-->
+<!--                        <td>(2008.1畢業)(96學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">92</td>-->
+<!--                        <td>資訊工程所</td>-->
+<!--                        <td>楊季剛</td>-->
+<!--                        <td>中文新聞相關性事件之挖掘-藉由Haar小波轉換</td>-->
+<!--                        <td>(2007.1畢業)(95學年度)</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="text-align:center;">92</td>-->
+<!--                        <td>生物資訊所</td>-->
+<!--                        <td>林炯璁</td>-->
+<!--                        <td>臨床微生物檢驗的資料挖掘研究－以偵測鮑氏不動桿菌之院內感染為例</td>-->
+<!--                        <td>(2006.6畢業)(94學年度)</td>-->
+<!--                    </tr>-->
 
                     </tbody>
                 </table>
+            </div>
             </div>
 
 

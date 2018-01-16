@@ -22,6 +22,15 @@ include("mysql_connect.inc.php");
     <link rel="stylesheet" type="text/css" href="CSS/cotm.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Tech/button_css.css">
+    <script language="JavaScript" type="text/javascript">
+
+        // function tfm_confirmLink2(message) { //v1.0
+        //     document.MM_returnValue = confirm(message);
+        // }
+
+    </script>
+
 
 
     <?php
@@ -51,11 +60,17 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
-        <?php if($_SESSION['id'] != null) {?>
-        body {
-
-            background: lightblue url() no-repeat fixed center;
+        .well{
+            background: rgb(242,246,248);
+            background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 22%, rgba(181,198,208,1) 71%, rgba(224,239,249,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 22%,rgba(181,198,208,1) 71%,rgba(224,239,249,1) 100%);
+            background: linear-gradient(to bottom, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 22%,rgba(181,198,208,1) 71%,rgba(224,239,249,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 );
         }
+        <?php if($_SESSION['id'] != null) {
+
+            ?>
+
 <?php
 
 }else{
@@ -71,11 +86,13 @@ include("mysql_connect.inc.php");
 
 
     </style>
+    <?php if($_SESSION['id'] != null) {
+        include("CSS/dashboard_bg_add.php");
+    }
+    ?>
 </head>
 <body>
-
-
-<!--//test-->
+<!--   - . .- -.-. .... . .-. .-- . -...   -->
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -154,26 +171,15 @@ include("mysql_connect.inc.php");
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-<!--            <button ><a href="pdfCrator.php" target="_blank">pdfCrator_test</a></button>-->
+
             <?php if($_SESSION['id'] != null) {
 
                 ?>
-                <span style="text-align: center; font-size: 8em"> <a style="color: #951d1a">登入中</a ></span>
+                <span style="text-align: center; font-size: 3em">登入中</span>
                 <?php
             }
             ?>
-<!--            <button onclick="myFunction()">需要輸入名子嗎?</button>-->
-            <p id="demo"></p>
-<!--            <script>-->
-<!--                function myFunction() {-->
-<!--                var a = prompt("Please enter your name", "未輸入");-->
-<!---->
-<!--                if (a != null) {-->
-<!--                    document.getElementById("demo").innerHTML = "您輸入的名子在這裡:"+a;-->
-<!---->
-<!--                }-->
-<!--                }-->
-<!--            </script>-->
+
 
         </div>
         <div class="col-sm-4">
@@ -189,6 +195,7 @@ include("mysql_connect.inc.php");
                 {mysqli_set_charset($link,'utf8');?>
                 <h1 > <?php   echo " $row[2]<br> " ?></h1>
                 <p> <?php   echo " $row[6]<br> " ?></p>
+                <a href="pdfCrator.php" target="_blank"> <button class="button button5" >pdf</button></a>
             </div>
             <div class="well">
                 <?php
@@ -226,12 +233,12 @@ include("mysql_connect.inc.php");
         </div>
         <div class="col-sm-3">
 <!--            <div class="col-lg-6 col-lg-offset-3">-->
-            <div class="well">
+            <div class="well well-sm" style="text-align: center" >
 
                 <script language="Javascript">
                     document.write('<a href="http://www.free-counter.jp/"></a>');</script><noscript>
                     <a >カウンター</a><a href="http://hqm.f-counter.com/">カウンター</a></noscript>
-                <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a><img src="https://www.f-counter.net/ani1/29/1513700600/" alt="カウンター" border="0" style="margin:0; padding:0; border:0; vertical-align:bottom"></a></td>
+                <nobr><table border="0" cellspacing="0" cellpadding="0" ><tbody><tr><td ><a ><img src="https://www.f-counter.net/ani1/29/1513700600/" alt="カウンター" border="0" style="margin:0; padding:0; border:0; vertical-align:bottom"></a></td>
                             <td><a ><img src="https://www.f-counter.net/ani2/29/1513700600/" alt="カウンター" border="0" style="margin:0; padding:0; border:0; vertical-align:bottom"></a></td></tr></tbody></table></nobr>
 
             </div>

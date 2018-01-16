@@ -9,7 +9,7 @@
 ?>
 <?php session_start(); ?>
 <?php
-include("mysql_connect.inc.php");
+include("../mysql_connect.inc.php");
 
 ?>
 <!DOCTYPE html>
@@ -42,16 +42,18 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
-        <?php if($_SESSION['id'] != null) {?>
-        body {
 
-            background: lightblue url("") no-repeat fixed center;
-        }
+    </style>
+    <?php if($_SESSION['id'] != null) {
+        include("../CSS/dashboard_bg_add.php");
+
+        ?>
         <?php
 
-        }
-                ?>
-    </style>
+    }else{
+        include("../CSS/base_bg_add.php");
+    }
+    ?>
 </head>
 <body>
 
@@ -107,61 +109,38 @@ include("mysql_connect.inc.php");
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
             <h3>學歷</h3>
-            <p>沙鹿國小 (1972.9-1978.6)</p>
-            <p>沙鹿國中 (1978.9-1981.6)</p>
-            <p>台中一中 (1981.9-1984.6)</p>
-            <p>大同工學院資訊工程系   (1985.9-1989.6)</p>
-            <p>中正大學資訊工程所 碩士(1991.9-1993.6)</p>
-            <p>中正大學資訊工程所 博士(1993.9-2002.6)</p>
+            <?php
+            include ("education/writing_change.php");
+            include ("education/writingdata.php");
+
+            ?>
+
+
         </div>
         <div id="menu1" class="tab-pane fade">
             <h3>經歷</h3>
-            <p> 1988.5  -1989.5  大同公司 網路組工讀</p>
-            <p>   1989.7  -1991.5  預官第39期步兵排長 (陸軍步校（受訓）)(陸軍官校（資訊中心少尉教官）)</p>
-            <p> 1997.2  -1997.5  第28屆全國大專運動會資訊組 測試規劃負責人</p>
-            <p> 1999.12 -2000.4  網路資料庫、程式設計班講師(青輔會委託中正大學辦理，共三梯次)</p>
-            <p>2002.8  -2003.1  澎湖技術學院 電算中心 系統作業與支援組 組長</p>
+            <?php
+            include ("experience/writing_change.php");
+            include ("experience/writingdata.php");
+
+            ?>
+
         </div>
         <div id="menu2" class="tab-pane fade">
             <h3>教學</h3>
-            <p> 專任副教授	亞洲大學
-                2014.8 - 至今</p>
+            <?php
+            include ("teaching/writing_change.php");
+            include ("teaching/writingdata.php");
 
-
-            <p>  專任助理教授	亞洲大學
-                2005.8 - 2014.7
-
-                18學期</p>
-            <p> 專任助理教授
-                臺中健康暨管理學院
-                2003.2.1 - 2005.7
-
-                5 學期</p>
-            <p>專任講師	澎湖技術學院	2000.8.1 -  2003.1.31	5 學期</p>
-            <p>兼任講師
-                中正大學
-                1995.8.1 - 1997.1.31
-                1997.8.1 - 1998.1.31
-                1998.8.1 - 2001.1.31
-                9 學期</p>
-            <p>中國醫藥學院	1997.9 - 1999.7 	4 學期</p>
-            <p>協志高職	1996.9 - 1998.2	3 學期</p>
-            <p>勤益工專
-                1996.8.1 - 1997.1.31
-                1997.8.1 - 1998.1.31
-                2 學期</p>
-            <p>台灣體育學院	1998.8.1 - 1999.1.31 3 學期</p>
-
+            ?>
         </div>
         <div id="menu3" class="tab-pane fade">
             <h3>參加團體</h3>
-            <p>台灣生物資訊學會
-                永久會員（2001.10 起）</p>
-            <p> 社團法人台灣雲端計算學會
+            <?php
+            include ("groups/writing_change.php");
+            include ("groups/writingdata.php");
 
-                永久會員 (2011.5.31起)</p>
-            <p>台灣生物資訊與系統生物學會
-                會員(2012)</p>
+            ?>
         </div>
     </div>
 </div>

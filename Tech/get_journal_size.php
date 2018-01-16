@@ -13,5 +13,5 @@ $sql = "SELECT * FROM `writingData` ORDER BY tag ASC ";
 $result = mysqli_query($connect,$sql);
 $num_rows = mysqli_num_rows($result);
 
-echo " 共有 $num_rows 篇 \n";
+echo " 目前共有 $num_rows 篇 \n";
 ?>

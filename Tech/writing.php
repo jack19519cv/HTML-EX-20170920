@@ -9,7 +9,7 @@
 ?>
 <?php session_start(); ?>
 <?php
-include("mysql_connect.inc.php");
+include("../mysql_connect.inc.php");
 
 ?>
 
@@ -43,16 +43,26 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
-        <?php if($_SESSION['id'] != null) {?>
-        body {
-
-            background: lightblue url() no-repeat fixed center;
+        .well{
+            background: rgb(242,246,248);
+            background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 22%, rgba(181,198,208,1) 71%, rgba(224,239,249,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 22%,rgba(181,198,208,1) 71%,rgba(224,239,249,1) 100%);
+            background: linear-gradient(to bottom, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 22%,rgba(181,198,208,1) 71%,rgba(224,239,249,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 );
         }
+
+
+    </style>
+    <?php if($_SESSION['id'] != null) {
+        include("../CSS/dashboard_bg_add.php");
+
+        ?>
         <?php
 
-        }
-                ?>
-    </style>
+    }else{
+        include("../CSS/base_bg_add.php");
+    }
+    ?>
 </head>
 <body>
 
@@ -107,15 +117,12 @@ include("mysql_connect.inc.php");
     <h2>著作</h2>
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#home">Journal</a></li>
-        <li><a data-toggle="tab" href="#menu1">International Conference</a></li>
-        <li><a data-toggle="tab" href="#menu2">Domestic Conference</a></li>
-        <?php   if($_SESSION['id'] != null){echo"<li><a data-toggle=\"tab\" href=\"#menu3\">Journal新增</a></li>";
-           echo"<li><a data-toggle=\"tab\" href=\"#menu4\">Journal刪除</a></li>";
-        }
-            $sql = "SELECT * FROM `writingData`";
+        <li  ><a data-toggle="tab" href="#menu1">International Conference</a></li>
+        <li  ><a data-toggle="tab" href="#menu2">Domestic Conference</a></li>
+<!--        <li class="active"><a data-toggle="tab" href="#home">Journal</a></li>-->
+<!--        <li ><a data-toggle="tab" href="#menu1">International Conference</a></li>-->
+<!--        <li><a data-toggle="tab" href="#menu2">Domestic Conference</a></li>-->
 
-        $result = mysqli_query($connect,$sql);
-            ?>
     </ul>
 
     <div class="tab-content">
@@ -132,48 +139,23 @@ include ("writingdata.php");
         </div>
         <div id="menu1" class="tab-pane fade">
             <h3>International Conference</h3>
-            <p>1.Extracting the Co-occurrences of DNA Maximal Repeats in both Human and Viruses
-                <span style="font-weight: bolder"> Jing-Doo Wang, </span>Yi-Chun Wang and Rouh-Mei Hu and Jeffrey Tsai
-                The 17th IEEE International Conference on BioInformatics and BioEngineering (BIBE 2017), pages 106-111, October 23 – 25, 2017. Washington DC, U.S.A.</p>
+            <?php
+            include ("ic/writing_change.php");
+            include ("ic/writingdata.php");
 
-            <p>2.A Novel Approach to Improve Quality Control by Comparing the Tagged Sequences of Product Traceability
-                <span style="font-weight: bolder"> Jing-Doo Wang,</span>
-                2017 The 3rd International Conference on Inventions, 29 September–2 October 2017, Sun Moon Lake, Taiwan</p>
-
-            <p>3.A Novel Approach to Extract Significant Time Intervals of Vehicles from Superhighway Gantry Timestamp Sequences
-                <span style="font-weight: bolder"> Jing-Doo Wang,</span> and Ming-Chorng Hwang,
-                2017 IEEE International Conference on Applied System Innovation (IEEE ICASI 2017) May 13-17, 2017,Hotel emisia, Sapporo, Japan (First Prize Paper Award) (Extended version submitted to Applied Sciences as a Special Issue "Selected Papers from IEEE ICASI 2017")</p>
-
+            ?>
         </div>
         <div id="menu2" class="tab-pane fade">
             <h3>Domestic Conference</h3>
-            <p>1.提升Hadoop MapReduce計算效能之研究-以抽取樣式歷史為例
-                陳彥棠、 <span style="font-weight: bolder">王經篤</span>
-                2015中華民國系統科學與工程研討會，2015年 7 月17-19日,大同大學</p>
-
-            <p>2.樣式歷史資料之形狀查詢-藉由Haar小波
-                <span style="font-weight: bolder">王經篤</span>、蔣中凱、陳瑞奇
-                2015年資訊科技國際研討會暨民生電子論壇
-                The 9th International Conference on Advanced Information Technologies /
-                Consumer Electronics Forum (AIT/CEF 2015), 2015年 4 月24、25 日,朝陽科技大學, pages 1239-1254</p>
-
-            <p>3.社群網站使用者上線時段分析-以批踢踢為例
-                郭佳霖、 <span style="font-weight: bolder">王經篤</span>
-                2014 數位科技與創新管理研討會,2014年6月14日,華梵大學</p>
-        </div>
-        <div id="menu3" class="tab-pane fade">
-<?php if($_SESSION['id'] != null){
-    include ("../writingRe.php");
-}
-    ?>
-        </div>
-        <div id="menu4" class="tab-pane fade">
             <?php
-            include("writing_delete.php")
+            include ("dc/writing_change.php");
+            include ("dc/writingdata.php");
+
             ?>
         </div>
+        <div id="menu3" class="tab-pane fade">
 
-
+        </div>
     </div>
 </div>
 

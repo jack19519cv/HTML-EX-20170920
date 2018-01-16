@@ -218,8 +218,8 @@ body {
         </tr>
         <tr class="warning" >
 
-            <td style="text-align: right"><img style="width: 20px; height: 20px; " alt="Image" src="pic/arrow-down.png" ></td>
-            <td >English Learning <img style="width: 20px;height: 20px; text-align: left"  alt="Image" src="pic/arrow-down.png" ></td>
+            <td></td>
+            <td>English Learning</td>
             <td></td>
 
         </tr>

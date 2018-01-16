@@ -9,7 +9,7 @@
 ?>
 <?php session_start(); ?>
 <?php
-include("mysql_connect.inc.php");
+include("../mysql_connect.inc.php");
 
 ?>
 <!DOCTYPE html>
@@ -42,16 +42,20 @@ include("mysql_connect.inc.php");
 
             height: 25px;
         }
-        <?php if($_SESSION['id'] != null) {?>
-        body {
 
-            background: lightblue url("") no-repeat fixed center;
-        }
+    </style>
+    <?php if($_SESSION['id'] != null) {
+        include("../CSS/dashboard_bg_add.php");
+
+        ?>
+
         <?php
 
-        }
-                ?>
-    </style>
+    }else{
+        include("../CSS/base_bg_add.php");
+    }
+
+    ?>
 </head>
 <body>
 
@@ -119,6 +123,11 @@ include("mysql_connect.inc.php");
         <div id="home" class="tab-pane fade in active">
             <ul>
                 <span style="  font-size:2em ;"> <li >Text Mining</li></span>
+                <?php
+                include ("Text Mining/writing_change.php");
+                include ("Text Mining/writingdata.php");
+
+                ?>
                 <li style="list-style-type: circle"><a href="http://dns2.asia.edu.tw/~jdwang/corpus.htm">Corpus</a></li>
                 <li style="list-style-type: circle"  ><span style="font-weight: bold"><a href="http://dns2.asia.edu.tw/~jdwang/text_archaeology.htm">Text Archaeology</a> (文件考古學)</span> (diachronic corpora)(historical corpora)</li>
                 <div class="lists">
@@ -155,6 +164,11 @@ include("mysql_connect.inc.php");
         </div>
         <div id="menu1" class="tab-pane fade">
             <ul>
+                <?php
+                include ("Bibliometrics/writing_change.php");
+                include ("Bibliometrics/writingdata.php");
+
+                ?>
                 <span style="  font-size:2em ;"> <li >Shape Query</li></span>
                 <span style="  font-size:2em ;"> <li >  Hierarchical Taxonomy Construction</li></span>
                 <div class="listc">

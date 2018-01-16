@@ -35,7 +35,13 @@ $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Times','',12);
-for($i=1;$i<=40;$i++)
-    $pdf->Cell(0,10,'Printing line number '.$i,0,1);
+//include("mysql_connect.inc.php");
+$id="csieAdm";
+$sql = "SELECT * FROM `profile` where id='$id'";
+$result = mysqli_query($connect, $sql);
+$row = mysqli_fetch_row($result);
+
+for($i=1;$i<=2;$i++)
+    $pdf->Cell(0,10,'Printing line number '.  "$row[$i]",0,1);
 $pdf->Output();
 ?>

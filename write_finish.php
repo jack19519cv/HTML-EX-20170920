@@ -12,8 +12,8 @@ if($_SESSION['id'] != null ) {
     $id = $_SESSION['id'];
 //判斷帳號密碼是否為空值
 //確認密碼輸入的正確性
-//    && $type != null
-    if ($tag != null && $body  != null && $date != null  ) {
+//    && $type != null && $date != null
+    if ( $tag != null&& $body  != null   ) {
         //新增資料進資料庫語法
 //        , type
 //
