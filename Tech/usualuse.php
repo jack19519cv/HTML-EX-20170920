@@ -98,7 +98,7 @@ body {
 <div class="video-background">
     <div class="video-foreground">
 
-        <iframe src="https://www.youtube.com/embed/8_2SJvPzp6o?vq=hd720&controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/8_2SJvPzp6o?vq=hd720&controls=0&showinfo=0&rel=0&autoplay=1&loop=100" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -284,11 +284,11 @@ body {
 
 
 
-<footer class="container-fluid text-center">
-    <p>@developing by jun</p>
-</footer>
-</body>
 
+</body>
+<!--<footer class="container-fluid text-center">-->
+<!--    <p>@developing by jun</p>-->
+<!--</footer>-->
 </html>
 
 
